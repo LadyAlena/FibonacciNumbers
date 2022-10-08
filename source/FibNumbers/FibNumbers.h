@@ -2,8 +2,16 @@
 class FibNumbers
 {
 public:
-	void getQuantityFibNumbers(const int number);
+	void getQuantityFibNumbers(long int number);
 
 private:
-	int Fib(const int number);
+	long int Fib(long int number);
+
+	class Memory {
+	public:
+		long int* value;
+		bool* result;
+	};
+
+	Memory memory;
 };
