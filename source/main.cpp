@@ -1,5 +1,5 @@
 #include <iostream>
-#include "FibNumbers.h"
+#include "FibNumbers/FibNumbers.h"
 
 int main(int argc, char** argv) {
 
