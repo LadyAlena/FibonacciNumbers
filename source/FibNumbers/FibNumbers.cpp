@@ -7,7 +7,6 @@ FibNumbers::FibNumbers(const long int number)
 	this->number = number;
 	memory.valueResult = new long int[number + 1] {};
 	memory.existenceResult = new bool[number + 1] {};
-
 }
 
 FibNumbers::~FibNumbers()
