@@ -2,10 +2,22 @@
 
 #include <iostream>
 
-void FibNumbers::getQuantityFibNumbers(long int number)
+FibNumbers::FibNumbers(const long int number)
 {
-	memory.value = new long int[number] {};
-	memory.result = new bool[number] {};
+	this->number = number;
+
+	memory.valueResult = new long int[number] {};
+	memory.existenceResult = new bool[number] {};
+}
+
+FibNumbers::~FibNumbers()
+{
+	delete[] memory.valueResult;
+	delete[] memory.existenceResult;
+}
+
+void FibNumbers::getQuantityFibNumbers()
+{
 
 	for (int i = 0; i < number; ++i) {
 
@@ -13,23 +25,21 @@ void FibNumbers::getQuantityFibNumbers(long int number)
 
 	}
 
-	delete[] memory.value;
-	delete[] memory.result;
 }
 
 long int FibNumbers::Fib(long int number)
 {
 	long int result = 0;
 
-	if (memory.result[number]) {
-		return memory.value[number];
+	if (memory.existenceResult[number]) {
+		result =  memory.valueResult[number];
 	}
 	else {
 		if (number < 2) { result = number; }
 		else { result =  Fib(number - 1) + Fib(number - 2); }
 
-		memory.value[number] = result;
-		memory.result[number] = true;
+		memory.valueResult[number] = result;
+		memory.existenceResult[number] = true;
 
 	}
 
