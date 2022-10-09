@@ -9,10 +9,8 @@ int main(int argc, char** argv) {
 	std::cin >> n;
 
 	for (int i = 0; i < n; ++i) {
-		
 		FibNumbers fibNums(i);
 		std::cout << fibNums.getFib(i) << (i < n - 1 ? " ": "\n");
-
 	}
 
 	return 0;

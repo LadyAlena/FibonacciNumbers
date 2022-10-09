@@ -1,4 +1,5 @@
 #pragma once
+
 class FibNumbers
 {
 public:
@@ -8,7 +9,6 @@ public:
 	long int getFib(long int number);
 
 private:
-
 	long int number;
 
 	class Memory {
