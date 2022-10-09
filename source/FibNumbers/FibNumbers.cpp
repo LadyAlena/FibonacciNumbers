@@ -19,16 +19,13 @@ long int FibNumbers::getFib(long int number)
 {
 	long int result = 0;
 
-	if (memory.existenceResult[number]) {
-		result =  memory.valueResult[number];
-	}
+	if (memory.existenceResult[number]) { result =  memory.valueResult[number]; }
 	else {
 		if (number < 2) { result = number; }
 		else { result =  getFib(number - 1) + getFib(number - 2); }
 
 		memory.valueResult[number] = result;
 		memory.existenceResult[number] = true;
-
 	}
 
 	return result;
