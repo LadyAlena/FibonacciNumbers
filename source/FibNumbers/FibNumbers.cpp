@@ -40,7 +40,6 @@ long int FibNumbers::Fib(long int number)
 
 		memory.valueResult[number] = result;
 		memory.existenceResult[number] = true;
-
 	}
 
 	return result;
