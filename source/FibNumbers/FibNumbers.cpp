@@ -5,9 +5,9 @@
 FibNumbers::FibNumbers(const long int number)
 {
 	this->number = number;
+	memory.valueResult = new long int[number + 1] {};
+	memory.existenceResult = new bool[number + 1] {};
 
-	memory.valueResult = new long int[number] {};
-	memory.existenceResult = new bool[number] {};
 }
 
 FibNumbers::~FibNumbers()
@@ -16,18 +16,7 @@ FibNumbers::~FibNumbers()
 	delete[] memory.existenceResult;
 }
 
-void FibNumbers::getQuantityFibNumbers()
-{
-
-	for (int i = 0; i < number; ++i) {
-
-		std::cout << Fib(i) << (i < number - 1 ? " " : "\n");
-
-	}
-
-}
-
-long int FibNumbers::Fib(long int number)
+long int FibNumbers::getFib(long int number)
 {
 	long int result = 0;
 
@@ -36,10 +25,11 @@ long int FibNumbers::Fib(long int number)
 	}
 	else {
 		if (number < 2) { result = number; }
-		else { result =  Fib(number - 1) + Fib(number - 2); }
+		else { result =  getFib(number - 1) + getFib(number - 2); }
 
 		memory.valueResult[number] = result;
 		memory.existenceResult[number] = true;
+
 	}
 
 	return result;

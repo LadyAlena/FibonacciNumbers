@@ -8,10 +8,12 @@ int main(int argc, char** argv) {
 	std::cout << "Введите число: ";
 	std::cin >> n;
 
-	FibNumbers fibNums(n);
+	for (int i = 0; i < n; ++i) {
+		
+		FibNumbers fibNums(i);
+		std::cout << fibNums.getFib(i) << (i < n - 1 ? " ": "\n");
 
-	fibNums.getQuantityFibNumbers();
+	}
 
-	
 	return 0;
 }

@@ -4,13 +4,12 @@ class FibNumbers
 public:
 	FibNumbers(const long int number);
 	~FibNumbers();
-	void getQuantityFibNumbers();
+
+	long int getFib(long int number);
 
 private:
 
 	long int number;
-
-	long int Fib(long int number);
 
 	class Memory {
 	public:
