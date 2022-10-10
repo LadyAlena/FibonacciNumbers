@@ -1,5 +1,4 @@
 #include "FibNumbers.h"
-#include <iostream>
 
 FibNumbers::FibNumbers(const long int number)
 {
